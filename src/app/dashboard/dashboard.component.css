@@ -1,0 +1,148 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Calibri', sans-serif;
+}
+
+.dashboard-header {
+    background-color: #1e4888;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard-main {
+    display: flex;
+    height: calc(100vh - 50px);
+}
+
+.person-labels {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.person-labels div {
+    margin: 0 5px;
+    font-size: 16px;
+}
+
+.sidebar {
+    width: 220px;
+    color: black;
+    padding-top: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 15px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: black;
+}
+
+.sidebar ul li i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.sidebar ul li:hover {
+    background-color: #f3f3f3;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f3f3f3;
+}
+
+.charts-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.chart-box {
+    width: 48%;
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chart-box h3 {
+    color: #4b4e53;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.issued-books-summary {
+    margin-top: 20px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.issued-books-summary h3 {
+    color: #2F5597;
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.issued-books-summary table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.issued-books-summary th,
+.issued-books-summary td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.issued-books-summary th {
+    background-color: #1e4888;
+    color: white;
+    text-align: left;
+    font-size: 18px;
+}
+
+.issued-books-summary td {
+    font-size: 18px;
+    text-align: left;
+}
+
+button {
+    background-color: #4472C4;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #365f91;
+}
+
+label {
+    font-size: 18px;
+    color: black;
+    display: block;
+    margin-bottom: 10px;
+}

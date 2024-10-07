@@ -1,0 +1,32 @@
+<div class="view-book-container">
+    <div class="view-book-header">
+        <h2>View Book</h2>
+    </div>
+    <div style="padding: 5px;">
+        <button class="nav-btn" pButton type="submit" label="Back To Dashboard" (click)="navFn()"></button>
+    </div>
+    <p-table [value]="bookData" styleClass="p-datatable-gridlines" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Book Name</th>
+                <th>Author</th>
+                <th>Publication</th>
+                <th>Qty.</th>
+                <th>Price</th>
+                <th>Branch</th>
+                <th>Details</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-book>
+            <tr>
+                <td>{{ book.bokName }}</td>
+                <td>{{ book.authr }}</td>
+                <td>{{ book.publicatn }}</td>
+                <td>{{ book.qty }}</td>
+                <td>{{ book.price }}</td>
+                <td>{{ book.brnch }}</td>
+                <td>{{ book.details }}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

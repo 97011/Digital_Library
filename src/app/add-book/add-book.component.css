@@ -1,0 +1,30 @@
+.add-book-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    background-color: #f4f4f9;
+    min-height: 100vh;
+}
+
+textarea {
+    width: 100%;
+}
+
+.nav-btn {
+    padding: 3px;
+    float: right;
+}
+
+.add-book-header {
+    background-color: #1e4888;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

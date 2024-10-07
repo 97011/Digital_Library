@@ -1,0 +1,23 @@
+.p-field {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.p-field label {
+    font-size: 16px;
+    color: #333;
+    padding: 11px 12px 8px 0px;
+    width: 119px;
+    display: block;
+}
+
+.p-field input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.nav-btn {
+    padding: 3px;
+    float: right;
+}

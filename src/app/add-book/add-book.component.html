@@ -1,0 +1,77 @@
+<p-toast></p-toast>
+<div class="add-book-container">
+    <div class="add-book-header">
+        <h2>Add Book</h2>
+    </div>
+    <div style="padding: 5px;">
+        <button class="nav-btn" pButton type="submit" label="Back To Dashboard" (click)="navFn()"></button>
+    </div>
+    <marquee style="color: red;">Please Enter * Mark Manditory Fields</marquee>
+    <form [formGroup]="addBookGrp">
+        <div class="p-field">
+            <label>Person Name<span style="color: red;">*</span></label>
+            <input pInputText type="text" formControlName="prsnName" />
+        </div>
+        <div class="p-field">
+            <label>Roll Number<span style="color: red;">*</span></label>
+            <input pInputText type="text" formControlName="prsnRollNo" />
+        </div>
+        <div class="p-field">
+            <label>ISBN Number<span style="color: red;">*</span></label>
+            <input pInputText type="text" formControlName="isbnNo" />
+            <div *ngIf="addBookGrp.get('isbnNo')?.invalid && addBookGrp.get('isbnNo')?.touched" style="color: red;">
+                ISBN number is invalid
+            </div>
+        </div>
+        <div class="p-field">
+            <label>Book Name<span style="color: red;">*</span></label>
+            <input pInputText type="text" formControlName="bokName" />
+        </div>
+        <div class="p-field">
+            <label>Author</label>
+            <input pInputText type="text" formControlName="authr" />
+            <div *ngIf="addBookGrp.get('authr')?.invalid && addBookGrp.get('authr')?.touched" style="color: red;">
+                Author is invalid
+            </div>
+        </div>
+        <div class="p-field">
+            <label>Publication<span style="color: red;">*</span></label>
+            <input pInputText type="text" formControlName="publicatn" />
+            <div *ngIf="addBookGrp.get('publicatn')?.invalid && addBookGrp.get('publicatn')?.touched" style="color: red;">
+                Publication is invalid
+            </div>
+        </div>
+        <div class="p-field">
+            <label>Details<span style="color: red;">*</span></label>
+            <textarea rows="5" cols="30" pInputTextarea formControlName="details">
+            </textarea>
+            <div *ngIf="addBookGrp.get('details')?.invalid && addBookGrp.get('details')?.touched" style="color: red;">
+                Details is invalid
+            </div>
+        </div>
+        <div class="p-field">
+            <label>Qty.<span style="color: red;">*</span></label>
+            <input pInputText type="text" formControlName="qty" />
+            <div *ngIf="addBookGrp.get('qty')?.invalid && addBookGrp.get('qty')?.touched" style="color: red;">
+                Qty is invalid
+            </div>
+        </div>
+        <div class="p-field">
+            <label>Price</label>
+            <input pInputText type="text" formControlName="price" />
+            <div *ngIf="addBookGrp.get('price')?.invalid && addBookGrp.get('price')?.touched" style="color: red;">
+                Price is invalid
+            </div>
+        </div>
+        <div class="p-field">
+            <label>Branch<span style="color: red;">*</span></label>
+            <p-dropdown [options]="branches" formControlName="brnch" placeholder="Select a branch">
+            </p-dropdown>
+        </div>
+        <div class="p-field">
+            <label>Issued On<span style="color: red;">*</span></label>
+            <p-calendar formControlName="issuedOn" dateFormat="dd/mm/yy"></p-calendar>
+        </div>
+        <button pButton type="submit" label="submit" (click)="addBokFn()" [disabled]="addBookGrp.invalid"></button>
+    </form>
+</div>

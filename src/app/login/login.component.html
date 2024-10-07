@@ -1,0 +1,15 @@
+<p-toast></p-toast>
+<div class="login-container">
+    <h1>Digital Library</h1>
+    <form ngForm #loginDta="ngForm" (ngSubmit)="loginFn(loginDta)">
+        <div class="p-field">
+            <label>Username</label>
+            <input type="text" pInputText ngModel name="uname" #uname="ngModel" autocomplete="off" />
+        </div>
+        <div class="p-field">
+            <label>Password</label>
+            <input type="password" pInputText ngModel name="upwd" #upwd="ngModel" autocomplete="off" />
+        </div>
+        <button pButton type="submit" label="Login"></button>
+    </form>
+</div>
